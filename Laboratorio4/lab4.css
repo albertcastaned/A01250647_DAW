@@ -1,9 +1,44 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid white;
+}
+td {
+    background-color: #2d3958;
+}
+caption{
+    margin-bottom: 10px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
 }
 th,td {
     padding: 15px;
 }
+header {
+    border: 2px solid white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-radius: 7px;
+
+    background-color: #1b212f;
+
+}
 body{
     text-align: center;
+    font-family: "Helvetica", "Arial", sans-serif;
+    background: #12151f;
+    color: #fff;
+}
+.ejercicio{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+    border: 2px solid white;
+    border-radius: 7px;
+    background: #1b212f;
+
+
 }

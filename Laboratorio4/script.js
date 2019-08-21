@@ -12,7 +12,7 @@ function tabla_potencias(limite = 10) {
         }
         resultado += "</tr>";
     }
-    resultado += "</tbody></table><hr/>";
+    resultado += "</tbody></table>";
     return resultado;
 }
 function tiempo_en_segundos(tiempo_inicial,tiempo_final)
@@ -20,12 +20,33 @@ function tiempo_en_segundos(tiempo_inicial,tiempo_final)
     return (tiempo_final - tiempo_inicial)/1000;
 }
 
+function contar_tipo_numeros(arreglo)
+{
+    let negativos = 0;
+    let ceros = 0;
+    let positivos = 0;
+
+    for(let i = 0; i < arreglo.length; i++)
+    {
+        if(arreglo[i] > 0)
+            positivos++;
+        else if(arreglo[i] < 0)
+            negativos++;
+        else
+            ceros++;
+    }
+    return "Positivos: " + positivos + ", Negativos: " + negativos + ", Ceros: " + ceros;
+}
 //Ejercicio 1
+document.write('<div class = "ejercicio">' + "<h2>Ejercicio 1</h2>");
+
 let limite_usuario = prompt("Ingresa un numero: ");
 let tabla_personalizada = tabla_potencias(limite_usuario);
-document.write(tabla_personalizada);
+document.write('<div style="overflow-x:auto;">' + tabla_personalizada + "</div></div>");
 
 //Ejercicio 2
+document.write('<div class = "ejercicio">' + "<h2>Ejercicio 2</h2>");
+
 let numero_aleatorio_1 = Math.floor(Math.random() * 500);
 let numero_aleatorio_2 = Math.floor(Math.random() * 500);
 
@@ -37,4 +58,8 @@ let t1 = performance.now();
 
 
 document.write(respuesta_usuario == resultado ? "Tu respuesta es correcta<hr/>" : "Tu respuesta es incorrecta<br>");
-document.write("Tu tiempo de respuesta fue de " + tiempo_en_segundos(t0,t1) + " segundos</hr>");
+document.write("Tu tiempo de respuesta fue de " + tiempo_en_segundos(t0,t1) + " segundos</div>");
+
+//Ejercicio 3
+document.write('<div class = "ejercicio">' + "<h3>Ejercicio 3</h2><br>Arreglo: [ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]<br>");
+document.write(contar_tipo_numeros([ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]) + "<br></div>")
