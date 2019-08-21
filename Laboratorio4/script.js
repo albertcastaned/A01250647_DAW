@@ -57,7 +57,7 @@ let respuesta_usuario = prompt("Ingresa el resultado de " + numero_aleatorio_1 +
 let t1 = performance.now();
 
 
-document.write(respuesta_usuario == resultado ? "Tu respuesta es correcta<hr/>" : "Tu respuesta es incorrecta<br>");
+document.write(respuesta_usuario == resultado ? '<span class = "correcto">Tu respuesta es correcta</span><br/>' : '<span class = "incorrecto">Tu respuesta es incorrecta</span><br>');
 document.write("Tu tiempo de respuesta fue de " + tiempo_en_segundos(t0,t1) + " segundos</div>");
 
 //Ejercicio 3
