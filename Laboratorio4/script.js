@@ -1,7 +1,7 @@
 function tabla_potencias(limite = 10) {
 
     let resultado = '<table align="center"><tbody>';
-    let potencia = 2;
+    const potencia = 2;
     resultado += "<caption>Tabla de numeros al cuadrado y al cubo</caption>"
     for (let i = 1; i <= potencia + 1; i++) {
         resultado += "<tr>";
@@ -37,10 +37,40 @@ function contar_tipo_numeros(arreglo)
     }
     return "Positivos: " + positivos + ", Negativos: " + negativos + ", Ceros: " + ceros;
 }
+
+function promedio_de_matriz(matriz)
+{
+    let arreglo_resultado = [];
+    for(let renglon = 0; renglon < matriz.length; renglon++)
+    {
+        let promedio = 0;
+        let renglon_numero_elementos = matriz[renglon].length;
+        for(let columna = 0; columna < renglon_numero_elementos; columna++)
+        {
+            promedio+= matriz[renglon][columna];
+        }
+        arreglo_resultado.push(promedio / renglon_numero_elementos);
+    }
+    return arreglo_resultado;
+}
+
+function numero_inverso(numero_original)
+{
+    let inverso = 0;
+    while( numero_original != 0)
+    {
+        inverso *= 10;
+        inverso += numero_original % 10;
+        numero_original = Math.floor(numero_original / 10);
+    }
+    return inverso;
+}
+
 //Ejercicio 1
 document.write('<div class = "ejercicio">' + "<h2>Ejercicio 1</h2>");
 
 let limite_usuario = prompt("Ingresa un numero: ");
+
 let tabla_personalizada = tabla_potencias(limite_usuario);
 document.write('<div style="overflow-x:auto;">' + tabla_personalizada + "</div></div>");
 
@@ -61,5 +91,13 @@ document.write(respuesta_usuario == resultado ? '<span class = "correcto">Tu res
 document.write("Tu tiempo de respuesta fue de " + tiempo_en_segundos(t0,t1) + " segundos</div>");
 
 //Ejercicio 3
-document.write('<div class = "ejercicio">' + "<h3>Ejercicio 3</h2><br>Arreglo: [ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]<br>");
-document.write(contar_tipo_numeros([ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]) + "<br></div>")
+document.write('<div class = "ejercicio">' + "<h2>Ejercicio 3</h2><br>Arreglo: [ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]<br>");
+document.write(contar_tipo_numeros([ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]) + "<br></div>");
+
+//Ejercicio 4
+document.write('<div class = "ejercicio">' + "<h2>Ejercicio 4</h2><br>Matriz: [ [10,2,5,5.9,9,4,6],[0,0,0],[-5,5,4,0,9,6],[82,50,60,100,40,90,66,55] ]<br>");
+document.write(promedio_de_matriz([[10,2,5,5.9,9,4,6],[0,0,0],[-5,5,4,0,9,6],[82,50,60,100,40,90,66,55]]) + "<br></div>");
+
+//Ejercicio 5
+document.write('<div class = "ejercicio">' + "<h2>Ejercicio 5</h2><br>Numero: 28145920 <br>");
+document.write(numero_inverso(28145920) + "<br></div>");
