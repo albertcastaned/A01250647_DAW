@@ -56,5 +56,5 @@ function obtener_resultado()
             break;
         
     }
-    alert(dragones.length == 0 ? "Si" : "No");
+    document.getElementById('resultadosDragon').innerHTML = dragones.length == 0 ? '<h2 class = "correcto">Si</h2>' : '<h2 class = "incorrecto">No</h2>'
 }

@@ -16,7 +16,7 @@
     <script src="dragons.js"></script>
     
     <div class = "ejercicio">
-        <h2>Ejercicio 6 - Dragons (ACM)</h2>
+        <h2>Ejercicio 6 - Dragons (ACM) <small>[1]</small></h2>
         <p>Kirito esta atorado en un nivel de MMORPG. Para continuar, necesita vencer todos los n dragones. Kirito y los dragones tienen un nivel de fuerza, la cual se representa con un entero.
             En el duelo entre Kirito y un dragón gana quien tenga estrictamente mayor fuerza. Inicialmente, Kirito empieza con fuerza igual a s.
 
@@ -33,6 +33,110 @@
             
         </p>
         <button onclick="ingresar_datos()">Ingresar valores</button>
+        
+        <br><br>
+        <h2>Resultado</h2>
+        <div id="resultadosDragon">
+
+        </div>
+    </div>
+
+    <div class = "ejercicio">
+        <h2>Cuestionario</h2>
+        <ul>
+            <li>
+                <h3>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+                <p>Aunque tengan nombres parecido, las dos son muy distintas. Java es un lenguaje compilado a diferencia de JavaScript. Ademas, JavaScript no esta orientado a objetos como Java. Por lo anterior, Java es un lenguaje mas potente que JavaScript para proposito general pero JavaScript
+                    tiene la ventaja de poder ejecutarse en web. <small>[2]</small>
+                </p>
+            </li>
+            <li>
+                <h3>¿Qué métodos tiene el objeto Date?</h3>
+                <p>
+                    <ul>
+                        <li>
+                            getFullYear()
+                        </li>
+                        <li>
+                            getMonth()
+                        </li>
+                        <li>
+                            getDate()
+                        </li>
+                        <li>
+                            getHours()
+                        </li>
+                        <li>
+                            getMinutes()
+                        </li>
+                    </ul>
+                    <small>[3]</small>
+                </p>
+            </li>
+            <li>
+                <h3>¿Qué métodos tienen los arreglos?</h3>
+                <p>
+                    <ul>
+                        <li>
+                            arr.push(..elementos): Agregar elemento al final
+                        </li>
+                        <li>
+                            arr.pop(): Extrae elemento al final
+                        </li>
+                        <li>
+                            arr.shift(): Extrae elemento del inicio
+                        </li>
+                        <li>
+                            arr.unshift(..elementos): Agrega elemento al inicio
+                        </li>
+                        <li>
+                            arr.splice(x,y): Elimina y elementos empezando por posición x.
+                        </li>
+                    </ul>
+                </p>
+                <small>[4]</small>
+            </li>
+            <li>
+                <h3>¿Cómo se declara una variable con alcance local dentro de una función?</h3>
+                <p>
+                    El declarar una variable como tipo var hara que solo tenga alcance en la función.
+                </p>
+            </li>
+            <li>
+                <h3>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3>
+                <p>
+                    Se puede modificar y leer la variable global para algún motivo interno de la función.
+                </p>
+            </li>
+            <li>
+                <h3>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</h3>
+                <p>
+                    Para esto se utilizaría el método match(). Este método nos puede servir para verificar que algún dato que da el usuario corresponde al patrón que debe introducir. Por ejemplo, verificar que un correo electrónico introducido tenga @ y termine en . com.
+                </p>
+                <small>[5]</small>
+            </li>
+        </ul>
+    </div>
+
+    <div class = "ejercicio">
+        <h2>Referencias: </h2>
+        <ol>
+            <li>
+                    Codeforces Round #142 (Div. 2) A. Dragons, https://codeforces.com/problemset/problem/230/A
+            </li>
+            <li>
+                    Miguel Angel A., 2001, https://desarrolloweb.com/articulos/492.php
+            </li>
+            <li>
+                    JavaScript Get Date Methods, w3schools.com, https://www.w3schools.com/js/js_date_methods.asp
+            </li>
+            <li>
+                    Array Methods, JavaScript.Info, 2019, https://javascript.info/array-methods
+            </li>
+            <li>
+                    JavaScript String match() Method, w3schools.com, https://www.w3schools.com/jsref/jsref_match.asp
+            </li>
+        </ol>
     </div>
 
 
