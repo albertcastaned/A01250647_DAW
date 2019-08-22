@@ -92,12 +92,12 @@ document.write("Tu tiempo de respuesta fue de " + tiempo_en_segundos(t0,t1) + " 
 
 //Ejercicio 3
 document.write('<div class = "ejercicio">' + "<h2>Ejercicio 3</h2><br>Arreglo: [ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]<br>");
-document.write(contar_tipo_numeros([ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]) + "<br></div>");
+document.write(contar_tipo_numeros([ 5, 4, -2, -2, 0, -0, 42, -599, 2, 0.9, -0.1]) + "<br><br>Arreglo: [ 0, 0, -2, -100, -10.1, 9, 9, 2, 4.2, 0.1, 0.001 ]<br>" + contar_tipo_numeros([ 0, 0, -2, -100, -10.1, 9, 9, 2, 4.2, 0.1, 0.001 ]) + "<br></div>");
 
 //Ejercicio 4
 document.write('<div class = "ejercicio">' + "<h2>Ejercicio 4</h2><br>Matriz: [ [10,2,5,5.9,9,4,6],[0,0,0],[-5,5,4,0,9,6],[82,50,60,100,40,90,66,55] ]<br>");
-document.write(promedio_de_matriz([[10,2,5,5.9,9,4,6],[0,0,0],[-5,5,4,0,9,6],[82,50,60,100,40,90,66,55]]) + "<br></div>");
+document.write(promedio_de_matriz([[10,2,5,5.9,9,4,6],[0,0,0],[-5,5,4,0,9,6],[82,50,60,100,40,90,66,55]]) + "<br><br>Matriz: [ [1000,1000,1000,1,500], [40,20,300,10,30],[50,50,51,50],[95,94,60,70,84] ]<br>" + promedio_de_matriz([[1000,1000,1000,1,500], [40,20,300,10,30],[50,50,51,50],[95,94,60,70,84]]) + "<br></div>");
 
 //Ejercicio 5
 document.write('<div class = "ejercicio">' + "<h2>Ejercicio 5</h2><br>Numero: 28145920 <br>");
-document.write(numero_inverso(28145920) + "<br></div>");
+document.write(numero_inverso(28145920) + "<br>Numero: 420195224<br>" + numero_inverso(420195224) + "<br></div>");
