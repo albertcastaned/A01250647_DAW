@@ -16,7 +16,8 @@
             </nav>
         </header>
 
-        <div id = "parte1" class = "seccion">
+        <section id = "parte1">
+            <h2>Validador de Passwords</h2>
             <form>
                 <p>
                     <label>Contraseña</label><br>
@@ -48,11 +49,34 @@
                 </div>
             <div id = "validadorResultado">
             </div>
-        </div>
+        </section>
 
-        <div id = "parte2" class = "seccion">
-            
-        </div>
+        <section id = "parte2">
+            <h2>Compra de articulos</h2>
+            <div class = "compra">
+                    <img src="static/images/headphones.jpg" alt="Audifonos Sennheiser" width="300" height="300">
+                    <h2>Audifonos Sennheiser</h2>
+                    <h3 class = "precio">$<span name = "precio">599</span></h3>
+                    <input type = "number" name="quantity" min="1">
+            </div>
+            <div class = "compra">
+                    <img src="static/images/sGalaxy.jpg" alt="Samsung Galaxy A1250" width="300" height="300">
+                    <h2>Samsung Galaxy A1250</h2>
+                    <h3 class = "precio"><del>$8,099</del> $<span name = "precio">6,538</span></h3>
+                    <input type = "number" name="quantity" min="1">
+
+            </div>
+            <div class = "compra">
+                    <img src="static/images/xiaomi.jpg" alt="Xiaomi Mi Band 4 Nacional" width="300" height="300">
+                    <h2>Xiaomi Mi Band 4 Nacional   </h2>
+                    <h3 class = "precio"><del>$899.00</del> $<span name = "precio"></span>749.99</h3>
+                    <input type = "number" name="quantity" min="1">
+
+            </div>
+            <p>
+            <button type="button" onclick="validarContra()">Comprar</button>
+            </p>
+        </section>
 
         <script src="script.js"></script>
 
