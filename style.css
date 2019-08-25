@@ -65,6 +65,10 @@ li{
     background: #1b212f;
     overflow-wrap: break-word;
 }
+.condiciones{
+    display: flex;
+    justify-content: center;
+}
 
 .correcto{
     color: green;

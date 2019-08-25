@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorio 5</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Laboratorio 5</h1>
+            <nav>
+                    <a href="../index.html">Home</a> |
+                    <a href="#cuestionario">Cuestionario</a> |
+                    <a href="#referencias">Referencias</a>
+            </nav>
+        </header>
+
+        <div id = "parte1" class = "seccion">
+            <form>
+                <p>
+                    <label>Contraseña</label><br>
+                    <input type="password" id="password1">
+                </p>
+                <p>
+                    <label>Confirmar contraseña</label><br>
+                    <input type="password" id="password2">
+                </p>
+                <p>
+                    <button type="button" onclick="validarContra()">Registrar</button>
+                </p>
+            </form>
+                <div class = "condiciones">
+                    <ul>
+                        <li>
+                            <small>Contraseña debe tener una letra mayúscula</small>
+                        </li>
+                        <li>
+                            <small>Contraseña debe tener un carácter especial</small>
+                        </li>
+                        <li>
+                            <small>Contraseña debe tener un numero</small>
+                        </li>
+                        <li>
+                            <small>Contraseña debe tener mas de 5 caracteres</small>
+                        </li>
+                    </ul>
+                </div>
+            <div id = "validadorResultado">
+            </div>
+        </div>
+
+        <div id = "parte2" class = "seccion">
+            
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
