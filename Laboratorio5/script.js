@@ -61,3 +61,36 @@ function validarContra()
     resultDiv.innerHTML = "<h2 class='correcto'>La contraseña es valida</h2>";
 
 }
+
+function comprar()
+{
+    let reciboSeccion = document.getElementById("recibo");
+
+    let nombres = document.getElementsByName("nombreProducto");
+
+    let precios = document.getElementsByName("precio");
+
+    let cantidades = document.getElementsByName("cantidad");
+
+    let total = 0;
+    for(let i = 0;i < cantidades.length; i++)
+    {
+        if(cantidades[i].valueAsNumber == NaN || cantidades[i].valueAsNumber <= 0)
+        {
+            reciboSeccion.innerHTML = "<h2 class='incorrecto'>Elige una cantidad valida para cada producto</h2>";
+            return;
+        }
+    }
+
+    reciboSeccion.innerHTML= "<h2>Recibo:<br>";
+
+    for(let i=0;i < cantidades.length;i++)
+    {
+        reciboSeccion.innerHTML+= "<h3>" + nombres[i].innerText + " x " + cantidades[i].valueAsNumber + ": $" + precios[i].innerText * cantidades[i].valueAsNumber + "</h3><br>";
+        total+= precios[i].innerText * cantidades[i].valueAsNumber;
+    }
+
+    reciboSeccion.innerHTML+= "<h3>Subtotal: $" + total + "</h3><br><h3>IVA: $" + total * 0.16 + "</h3><br><h3>Total: $" + total + total * 0.16 + "</h3><br>";
+
+
+}
