@@ -82,6 +82,28 @@
             </div>
         </section>
 
+        <section id="parte3">
+            <h2>Calculadora Basica</h2>
+            <form>
+                <p>
+                    <label>Operadores</label><br>
+                    <input type="number" id="operador1" placeholder="Primer numero">
+                    <input type="number" id="operador2" placeholder="Segundo numero"><br>
+                    <label>Elige la operacion</label>
+                    <select id="operacion">
+                        <option>Suma</option>
+                        <option>Resta</option>
+                        <option>Multiplicación</option>
+                        <option>División</option>
+                    </select><br><br>
+                    <button type="button" onclick="calcular()">Calcular</button>
+                </p>
+            </form>
+            <div id = "resultadoCalculo" >
+
+            </div>
+        </section>
+
         <script src="script.js"></script>
 
     </body>

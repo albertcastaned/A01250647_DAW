@@ -16,6 +16,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
+    text-align: center;
+    
 }
 th,td {
     padding: 15px;
@@ -51,6 +53,10 @@ body{
 li{
     text-align: left;
 }
+input{
+    margin: 20px;
+}
+
 section{
     transition: all .2s ease-in-out;
     margin-left: 30px;

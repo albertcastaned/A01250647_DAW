@@ -62,6 +62,41 @@ function validarContra()
 
 }
 
+function calcular()
+{
+    let resultadoCalculo = document.getElementById("resultadoCalculo");
+    let operador1 = document.getElementById("operador1").valueAsNumber;
+    let operador2 = document.getElementById("operador2").valueAsNumber;
+
+    let operacion = document.getElementById("operacion").value;
+    resultadoCalculo.innerHTML = "";
+
+    if(isNaN(operador1) || isNaN(operador2))
+    {
+        resultadoCalculo.innerHTML+= "<h2 class='incorrecto'>Llena los dos campos con un valor</h2>";
+        return;
+    }
+    switch(operacion)
+    {
+        case "Suma":
+            resultadoCalculo.innerHTML+= "<h2 class='correcto'>" + (operador1 + operador2) + "</h2>";
+            break;
+        case "Resta":
+            resultadoCalculo.innerHTML+= "<h2 class='correcto'>" + (operador1 - operador2) + "</h2>";
+            break;
+        case "División":
+            if(operador2 == 0)
+            {
+                resultadoCalculo.innerHTML+= "<h2 class='incorrecto'>No se puede dividir entre 0</h2>";
+                return;
+            }
+            resultadoCalculo.innerHTML+= "<h2 class='correcto'>" + (operador1 / operador2) + "</h2>";
+            break;
+        case "Multiplicación":
+            resultadoCalculo.innerHTML+= "<h2 class='correcto'>" + (operador1 * operador2) + "</h2>";
+            break;
+    }
+}
 function comprar()
 {
     let reciboSeccion = document.getElementById("recibo");
@@ -75,7 +110,7 @@ function comprar()
     let total = 0;
     for(let i = 0;i < cantidades.length; i++)
     {
-        if(cantidades[i].valueAsNumber == NaN || cantidades[i].valueAsNumber <= 0)
+        if(isNaN(cantidades[i].valueAsNumber) || cantidades[i].valueAsNumber <= 0)
         {
             reciboSeccion.innerHTML = "<h2 class='incorrecto'>Elige una cantidad valida para cada producto</h2>";
             return;
@@ -91,6 +126,5 @@ function comprar()
     }
 
     reciboSeccion.innerHTML+= "<h3>Subtotal: $" + total + "</h3><br><h3>IVA: $" + total * 0.16 + "</h3><br><h3>Total: $" + total + total * 0.16 + "</h3><br>";
-
 
 }
