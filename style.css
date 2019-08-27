@@ -41,6 +41,9 @@ header{
 
     background-color: #1b212f;
 }
+h3{
+    text-align: left;
+}
 section:hover{
     transform: scale(1.025);
 }
@@ -75,7 +78,6 @@ section{
     display: flex;
     justify-content: center;
 }
-
 .compra{
     display: inline-block;
     width: 500px;
@@ -86,7 +88,10 @@ section{
 .compra img{
     border-radius: 8px;
 }
-.compra h2, h3{
+.compra h2{
+    text-align: center;
+}
+.compra h3{
     text-align: center;
 }
 
