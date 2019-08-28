@@ -16,6 +16,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
+    text-align: center;
+    
 }
 th,td {
     padding: 15px;
@@ -39,7 +41,10 @@ header{
 
     background-color: #1b212f;
 }
-.seccion:hover{
+h3{
+    text-align: left;
+}
+section:hover{
     transform: scale(1.025);
 }
 body{
@@ -51,7 +56,11 @@ body{
 li{
     text-align: left;
 }
-.seccion{
+input{
+    margin: 20px;
+}
+
+section{
     transition: all .2s ease-in-out;
     margin-left: 30px;
     margin-right: 30px;
@@ -65,10 +74,38 @@ li{
     background: #1b212f;
     overflow-wrap: break-word;
 }
+.condiciones{
+    display: flex;
+    justify-content: center;
+}
+.compra{
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    margin: 1em;
+}
+
+.compra img{
+    border-radius: 8px;
+}
+.compra h2{
+    text-align: center;
+}
+.compra h3{
+    text-align: center;
+}
+
+.precio{
+    color: #FBB923;
+}
+.precio del{
+    color: rgb(110, 110, 110)
+}
 
 .correcto{
     color: green;
 }
+
 .incorrecto{
     color: red;
 }

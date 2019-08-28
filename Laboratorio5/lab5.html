@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorio 5</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Laboratorio 5</h1>
+            <nav>
+                    <a href="../index.html">Home</a> |
+                    <a href="#parte1">Ejercicio 1</a> |
+                    <a href="#parte2">Ejercicio 2</a> |
+                    <a href="#parte3">Ejercicio 3</a> |
+                    <a href="#cuestionario">Cuestionario</a>
+            </nav>
+        </header>
+
+        <section id = "parte1">
+            <h2>Validador de Passwords</h2>
+            <form>
+                <p>
+                    <label>Contraseña</label><br>
+                    <input type="password" id="password1">
+                </p>
+                <p>
+                    <label>Confirmar contraseña</label><br>
+                    <input type="password" id="password2">
+                </p>
+                <p>
+                    <button type="button" onclick="validarContra()">Registrar</button>
+                </p>
+            </form>
+                <div class = "condiciones">
+                    <ul>
+                        <li>
+                            <small>Contraseña debe tener una letra mayúscula</small>
+                        </li>
+                        <li>
+                            <small>Contraseña debe tener un carácter especial</small>
+                        </li>
+                        <li>
+                            <small>Contraseña debe tener un numero</small>
+                        </li>
+                        <li>
+                            <small>Contraseña debe tener mas de 5 caracteres</small>
+                        </li>
+                    </ul>
+                </div>
+            <div id = "validadorResultado">
+            </div>
+        </section>
+
+        <section id = "parte2">
+            <h2>Compra de articulos</h2>
+            <div class = "compra">
+                    <img src="static/images/headphones.jpg" alt="Audifonos Sennheiser" width="300" height="300">
+                    <h2 name = "nombreProducto">Audifonos Sennheiser</h2>
+                    <h3 class = "precio">$<span name = "precio">599.00</span></h3>
+                    <input type = "number" placeholder="Cantidad de productos" name="cantidad" min="1">
+            </div>
+            <div class = "compra">
+                    <img src="static/images/sGalaxy.jpg" alt="Samsung Galaxy A1250" width="300" height="300">
+                    <h2 name = "nombreProducto">Samsung Galaxy A1250</h2>
+                    <h3 class = "precio"><del>$8,099</del> $<span name = "precio">6538.00</span></h3>
+                    <input type = "number" placeholder="Cantidad de productos" name="cantidad" min="1">
+
+            </div>
+            <div class = "compra">
+                    <img src="static/images/xiaomi.jpg" alt="Xiaomi Mi Band 4 Nacional" width="300" height="300">
+                    <h2 name = "nombreProducto">Xiaomi Mi Band 4 Nacional</h2>
+                    <h3 class = "precio"><del>$899.00</del> $<span name = "precio">749.99</span></h3>
+                    <input type = "number" placeholder="Cantidad de productos" name="cantidad" min="1">
+
+            </div>
+            <p>
+            <button type="button" onclick="comprar()">Comprar</button>
+            </p>
+
+            <div id="recibo">
+                
+            </div>
+        </section>
+
+        <section id="parte3">
+            <h2>Calculadora Basica</h2>
+            <form>
+                <p>
+                    <label>Operadores</label><br>
+                    <input type="number" id="operador1" placeholder="Primer numero">
+                    <input type="number" id="operador2" placeholder="Segundo numero"><br>
+                    <label>Elige la operacion</label>
+                    <select id="operacion">
+                        <option>Suma</option>
+                        <option>Resta</option>
+                        <option>Multiplicación</option>
+                        <option>División</option>
+                    </select><br><br>
+                    <button type="button" onclick="calcular()">Calcular</button>
+                </p>
+            </form>
+            <div id = "resultadoCalculo" >
+
+            </div>
+        </section>
+
+        <section id="cuestionario">
+            <h2>Cuestionario</h2>
+            <ul>
+                <li>
+                    <h3>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</h3>
+                    <p>Es importante hacer una validacion propio para verificar que el usuario no ingrese datos inadecuados por error, ademas de transformar los datos a otro formato si es necesario</p>
+                </li>
+                <li>
+                    <h3>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h3>
+                    <p>Eliminando la funcion JS que valida los datos de donde se llama, como el boton. Esto se puede lograr desde la consola.</p>
+                </li>
+                <li>
+                    <h3>¿Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</h3>
+                    <p>Porque aunque es necesario validar desde el lado del servidor, las validaciones desde el lado del cliente nos sigue facilitando evitar errores y darle retroalimentacion inmediata al usuario.</p>
+                </li>
+            </ul>
+        </section>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
