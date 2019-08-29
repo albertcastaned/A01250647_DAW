@@ -44,6 +44,7 @@ header{
 h3{
     text-align: left;
 }
+
 section:hover{
     transform: scale(1.025);
 }
@@ -109,6 +110,16 @@ section{
 .incorrecto{
     color: red;
 }
+.dragAndDrop{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+}
+#recibo h2, h3{
+    text-align: center;
+}
 
 #watermark{
     color: #fff;
@@ -124,4 +135,7 @@ section{
     top:200px;
     opacity: 0.2;
     pointer-events:none;
+}
+#cuestionario h3{
+    text-align: left;
 }

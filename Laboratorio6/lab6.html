@@ -58,6 +58,7 @@
     
             <section id = "parte2">
                 <h2>Compra de articulos</h2>
+                <small>Precio baja cada 3 segundos</small><br>
                 <div class = "compra">
                         <img src="static/images/headphones.jpg" alt="Audifonos Sennheiser" width="300" height="300">
                         <h2 name = "nombreProducto">Audifonos Sennheiser</h2>
@@ -90,19 +91,30 @@
             <section id="parte3">
                 <h2>Calculadora Basica</h2>
                 <form>
-                    <p>
-                        <label>Operadores</label><br>
                         <input type="number" id="operador1" placeholder="Primer numero">
+
+                        <div class = "dragAndDrop" id="espacioDrop" ondrop="drop(event)" ondragover="permitirDrop(event)"></div>
+
                         <input type="number" id="operador2" placeholder="Segundo numero"><br>
-                        <label>Elige la operacion</label>
-                        <select id="operacion">
-                            <option>Suma</option>
-                            <option>Resta</option>
-                            <option>Multiplicación</option>
-                            <option>División</option>
-                        </select><br><br>
+
+                        <label>Elige la operacion</label><br><br>
+                        
+                        <div id="operaciones">
+                            <div class = "dragAndDrop" id="espacioDrag1" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="sumaDrag" src="static/images/suma.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <div class = "dragAndDrop" id="espacioDrag2" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="restaDrag" src="static/images/resta.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <div class = "dragAndDrop" id="espacioDrag3" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="multiDrag" src="static/images/multi.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <div class = "dragAndDrop" id="espacioDrag4" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="divDrag" src="static/images/division.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <br>
+                        </div>
                         <button type="button" onclick="calcular()">Calcular</button>
-                    </p>
                 </form>
                 <div id = "resultadoCalculo" >
     
