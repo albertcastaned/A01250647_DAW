@@ -44,9 +44,11 @@ header{
 h3{
     text-align: left;
 }
+
 section:hover{
     transform: scale(1.025);
 }
+
 body{
     text-align: center;
     font-family: "Helvetica", "Arial", sans-serif;
@@ -108,4 +110,33 @@ section{
 
 .incorrecto{
     color: red;
+}
+.dragAndDrop{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+}
+#recibo h2, h3{
+    text-align: center;
+}
+
+#watermark{
+    color: #fff;
+    font-size: 60pt;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+    left:100px;
+    top:200px;
+    opacity: 0.2;
+    pointer-events:none;
+}
+#cuestionario h3{
+    text-align: left;
 }
