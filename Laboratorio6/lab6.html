@@ -14,7 +14,8 @@
                 <a onmouseover="cambiarFont(this)" href="#parte1">Ejercicio 1</a> |
                 <a onmouseover="cambiarFont(this)" href="#parte2">Ejercicio 2</a> |
                 <a onmouseover="cambiarFont(this)" href="#parte3">Ejercicio 3</a> |
-                <a onmouseover="cambiarFont(this)" href="#cuestionario">Cuestionario</a>
+                <a onmouseover="cambiarFont(this)" href="#cuestionario">Cuestionario</a> | 
+                <a onmouseover="cambiarFont(this)" href="#OtrasFuentes">Otras Fuentes</a>
         </nav>
         </header>
 
@@ -125,16 +126,64 @@
                 <h2>Cuestionario</h2>
                 <ul>
                     <li>
-                        <h3>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</h3>
-                        <p>Es importante hacer una validacion propio para verificar que el usuario no ingrese datos inadecuados por error, ademas de transformar los datos a otro formato si es necesario</p>
+                        <h3>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</h3>
+                        <ul>
+                            <li>
+                                Static: Posición por defecto no afectada por las propiedades top, bottom, left, o right. Se posiciona de acuerdo a la estructura de la pagina.
+                            </li>
+                            <li>
+                                Relative: Posición relativa a la posición original. La diferencia en posición de la original se ajusta con top, bottom, left, y right.
+                            </li>
+                            <li>
+                                Fixed: Posición esta ajustada a la vista del navegador, es decir se mantiene en el mismo lugar aunque el usuario haga scroll a la pagina.
+                            </li>
+                            <li>
+                                Absolute: Posición relativa a una posición asignada. Similar a la Relative pero se asigna una posición especifica como pivote.
+                            </li>
+                            <li>
+                                Sticky: Depende de la posición del scroll del usuario. Puede ser Relative o Fixed de acuerdo a la posición del scroll.
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <h3>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h3>
-                        <p>Eliminando la funcion JS que valida los datos de donde se llama, como el boton. Esto se puede lograr desde la consola.</p>
+                        <h3>¿Cuáles son los valores estándar para la propiedad visibility?</h3>
+                        <ul>
+                            <li>
+                                Visible
+                            </li>
+                            <li>
+                                Hidden
+                            </li>
+                            <li>
+                                Collapse
+                            </li>
+                            <li>
+                                Initial
+                            </li>
+                            <li>
+                                Inherit
+                            </li>
+
+                        </ul>
                     </li>
                     <li>
-                        <h3>¿Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</h3>
-                        <p>Porque aunque es necesario validar desde el lado del servidor, las validaciones desde el lado del cliente nos sigue facilitando evitar errores y darle retroalimentacion inmediata al usuario.</p>
+                        <h3>¿Qué es el zIndex y para qué sirve?</h3>
+                        <p>Asigna el orden de como se dibujan los elementos en la pagina. Es decir, un elemento con zIndex alto aparecerá enfrente de todos los elementos. Esto nos sirve para acomodar elementos que aparecen juntos</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id = "OtrasFuentes">
+                <h2>Otras fuentes: </h2>
+                <ul>
+                    <li>
+                        <a href = "https://www.w3schools.com/jsref/prop_style_opacity.asp">Style opacity Property</a>
+                    </li>
+                    <li>
+                        <a href = "https://www.w3schools.com/jsref/prop_element_tagname.asp">HTML DOM tagName Property</a>
+                    </li>
+                    <li>
+                        <a href = "https://www.w3schools.com/jsreF/prop_element_childelementcount.asp">HTML DOM childElementCount Property</a>
                     </li>
                 </ul>
             </section>

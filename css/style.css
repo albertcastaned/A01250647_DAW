@@ -48,6 +48,7 @@ h3{
 section:hover{
     transform: scale(1.025);
 }
+
 body{
     text-align: center;
     font-family: "Helvetica", "Arial", sans-serif;
