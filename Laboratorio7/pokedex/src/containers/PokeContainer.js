@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Lista from '../components/Lista';
-
+import Typography from '@material-ui/core/Typography';
 
 class PokeContainer extends Component {
 
@@ -10,7 +10,7 @@ class PokeContainer extends Component {
     }
     componentDidMount()
     {
-        axios.get('https://pokeapi.co/api/v2/pokemon/?limit=151')
+        axios.get('https://pokeapi.co/api/v2/pokemon/?limit=644')
         .then(result => 
             {
                 const {results} = result.data;
@@ -25,6 +25,10 @@ class PokeContainer extends Component {
     render(){
 
         const {pokeData } = this.state;
+        if(pokeData.length === 0)
+        {
+            return(<Typography color="secondary" gutterBottom component="h1" variant="h1" style={{marginTop:"50px",textAlign: "center",}}>CARGANDO</Typography>)
+        }
         return(
         <Lista pokedata={pokeData} />
         );

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Card, CardMedia, CardContent, CardActionArea, Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
-import Container from '@material-ui/core/Container';
 
 class PokemonDetalle extends Component{
 
