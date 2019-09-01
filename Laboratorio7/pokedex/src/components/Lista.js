@@ -7,7 +7,7 @@ function Lista({ pokedata }) {
     return(
         <div style={{ marginTop: 20, padding: 30 }}>
 
-            <Grid container spacing={5} justify="center">
+            <Grid container spacing={2} justify="center">
                 {pokedata.map((pokemon, index)=> {
                     
                     let imagenUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";

@@ -10,10 +10,9 @@ class PokeContainer extends Component {
     }
     componentDidMount()
     {
-        axios.get('https://pokeapi.co/api/v2/pokemon/?limit=20')
+        axios.get('https://pokeapi.co/api/v2/pokemon/?limit=151')
         .then(result => 
             {
-                console.log(result)
                 const {results} = result.data;
 
                 this.setState({

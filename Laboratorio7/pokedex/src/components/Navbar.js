@@ -9,7 +9,7 @@ const NavBar = () => {
         <div>
             <AppBar position = "static">
                 <Toolbar>
-                    <Typography variant="h3" color="inherit">
+                    <Typography variant="h5" color="inherit">
                         Laboratorio 7 - Pokedex
                     </Typography>
                 </Toolbar>

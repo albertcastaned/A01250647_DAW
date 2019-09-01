@@ -4,16 +4,17 @@ import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 function Pokemon({to, id, name, classes, image}){
+    
     return(
         <div>
         <Card className={classes.item}>
-        <Link to="/info/1">
+        <Link to={to}>
 
             <CardActionArea>
                     <CardMedia className={classes.media} image={image}/>
                     <CardContent>
 
-                        <Typography gutterBottom component="h2" variant="h6" fontWeight="fontWeightBold">
+                        <Typography gutterBottom component="h2" variant="h6">
                             #{id}. {name}
                         </Typography>
                     </CardContent>
@@ -32,7 +33,7 @@ export default withStyles({
         minWidth: "300px",
         textAlign: "center",
         boxSizing: "border-box",
-        margin: "2em"
+        margin: "1em"
     },
 
     media:{

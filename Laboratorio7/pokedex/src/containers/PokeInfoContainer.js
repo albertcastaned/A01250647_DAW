@@ -1,14 +1,47 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
+import PokemonDetalle from '../components/PokemonDetalle';
+import axios from 'axios';
 
 
-class PokeInfo extends Component{
+class PokeInfoContainer extends Component {
 
+    state = {
+        pokeData: []
+    }
+    componentDidMount()
+    {
+        axios.get('https://pokeapi.co/api/v2/pokemon/' + this.props.match.params.pokeIndex)
+        .then(result => 
+            {
+                console.log(result.data);
+                result.data.name = result.data.name.toUpperCase();
+                this.setState({
+                    pokeData: result.data
+                })
+
+            }
+        )
+        .catch(error => console.log(error));
+    }
     render(){
 
-    return(
-        <Navbar />
-    );
+        let {pokeData} = this.state;
+
+        if (pokeData.length === 0) {
+            console.log("returned null");
+            return null;
+          }
+        
+
+        console.log(pokeData.types);
+        return(
+        <div>
+            <Navbar/>
+            <PokemonDetalle nombre={pokeData.name} id={pokeData.id} types={pokeData.types}/>
+        </div>
+        
+        );
     }
 }
-export default PokeInfo;
+export default PokeInfoContainer;
