@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardMedia, CardContent, CardActionArea, Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
+import Container from '@material-ui/core/Container';
 
 class PokemonDetalle extends Component{
 
@@ -9,19 +11,21 @@ class PokemonDetalle extends Component{
 
 
         var cardStyle = {
-            minWidth: "700px",
-            minHeight: "700px",
+            minWidth: "500px",
+            minHeight: "500px",
             textAlign: "center",
             boxSizing: "border-box",
-            margin: "1em"
+            margin: "2em"
             
 
         };
+
+
         const imageLink = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
         const data = this.props;
         return(
-            <div style={{ marginTop: 20, padding: 5 }}>
+            <div style={{ marginTop: 40, padding: 10 }}>
              
             <Grid container spacing={10} justify="center">            
                 <Card style={cardStyle}>
@@ -31,20 +35,33 @@ class PokemonDetalle extends Component{
                 component="img" 
                 image={`${imageLink}${data.id}.png?raw=true`}
                 alt={data.nombre}
-                height= "600px"
+                height= "400px"
+                width= "400px"
 
                 />
                     <CardContent>
 
-                        <Typography gutterBottom component="h2" variant="h3">
-                        #{data.id} {data.nombre}
+                        <Typography color="primary" gutterBottom component="h2" variant="h4">
+                        #{data.id} {data.nombre.toUpperCase()}
+
                         </Typography>
+                        <Divider variant="inset" style={{margin:10}}/>
+                        <Typography variant="h5" color="primary" component="h5">TYPES:</Typography>
 
                         {
                             data.types.map(item => (
-                            <Typography gutterBottom component="h2" variant="h3" key={item.type.name}>{item.type.name}</Typography>
+                                <Typography variant="body2" color="primary" component="h6" key={item.type.name}>{(item.type.name).toUpperCase()}</Typography>
                         ))
                         }
+                        <Divider variant="inset" style={{margin:10}}/>
+                        <Typography variant="h5" color="primary" component="h5" >STATS:</Typography>
+
+                        {
+                            data.stats.map(item => (
+                                <Typography variant="body2" color="primary" component="h6" key={item.stat.name}>{(item.stat.name).toUpperCase()}: {item.base_stat} / 255</Typography>
+                        ))
+                        }
+                        
 
  
                     </CardContent>

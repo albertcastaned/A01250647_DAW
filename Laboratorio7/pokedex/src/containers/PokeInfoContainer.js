@@ -15,8 +15,7 @@ class PokeInfoContainer extends Component {
         .then(result => 
             {
                 console.log(result.data);
-                result.data.name = result.data.name.toUpperCase();
-                this.setState({
+                 this.setState({
                     pokeData: result.data
                 })
 
@@ -38,7 +37,7 @@ class PokeInfoContainer extends Component {
         return(
         <div>
             <Navbar/>
-            <PokemonDetalle nombre={pokeData.name} id={pokeData.id} types={pokeData.types}/>
+            <PokemonDetalle nombre={pokeData.name} id={pokeData.id} types={pokeData.types} stats={pokeData.stats}/>
         </div>
         
         );

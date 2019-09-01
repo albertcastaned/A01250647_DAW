@@ -14,7 +14,7 @@ function Pokemon({to, id, name, classes, image}){
                     <CardMedia className={classes.media} image={image}/>
                     <CardContent>
 
-                        <Typography gutterBottom component="h2" variant="h6">
+                        <Typography color="primary" gutterBottom component="h2" variant="h6">
                             #{id}. {name}
                         </Typography>
                     </CardContent>
