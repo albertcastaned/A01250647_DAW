@@ -17,7 +17,6 @@ table {
     border-spacing: 0;
     width: 100%;
     text-align: center;
-    
 }
 th,td {
     padding: 15px;
@@ -55,11 +54,14 @@ body{
     background: #12151f;
     color: #fff;
 }
-li{
-    text-align: left;
-}
+
 input{
     margin: 20px;
+}
+
+ul, ol{
+    text-align: center;
+    list-style: inside;
 }
 
 section{
@@ -118,6 +120,7 @@ section{
     margin: 0 auto;
     border: 1px solid #fff;
 }
+
 #recibo h2, h3{
     text-align: center;
 }
@@ -137,6 +140,10 @@ section{
     opacity: 0.2;
     pointer-events:none;
 }
-#cuestionario h3{
+#cuestionario h3, ul{
     text-align: left;
+}
+#cuestionario ul{
+    list-style: outside;
+
 }
