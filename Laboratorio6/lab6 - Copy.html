@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorio 6</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 onmouseover="cambiarFont(this)">Laboratorio 6</h1>
+            <nav>
+                <a onmouseover="cambiarFont(this)" href="../index.html">Home</a> |
+                <a onmouseover="cambiarFont(this)" href="#parte1">Ejercicio 1</a> |
+                <a onmouseover="cambiarFont(this)" href="#parte2">Ejercicio 2</a> |
+                <a onmouseover="cambiarFont(this)" href="#parte3">Ejercicio 3</a> |
+                <a onmouseover="cambiarFont(this)" href="#cuestionario">Cuestionario</a> | 
+                <a onmouseover="cambiarFont(this)" href="#OtrasFuentes">Otras Fuentes</a>
+        </nav>
+        </header>
+
+        <div id = "watermark">
+            <h1>A0125647</h1>
+        </div>
+        <section id = "parte1" >
+                <h2>Validador de Passwords</h2>
+                <form onmouseover="mostrarInformacionValidador()" onmouseout="esconderInformacionValidador()">
+                    <p>
+                        <label>Contraseña</label><br>
+                        <input type="password" id="password1">
+                    </p>
+                    <p>
+                        <label>Confirmar contraseña</label><br>
+                        <input type="password" id="password2">
+                    </p>
+                    <p>
+                        <button type="button" onclick="validarContra()">Registrar</button>
+                    </p>
+                </form>
+                    <div class = "condiciones" id = "seccionCondiciones">
+                        <ul>
+                            <li>
+                                <small>Contraseña debe tener una letra mayúscula</small>
+                            </li>
+                            <li>
+                                <small>Contraseña debe tener un carácter especial</small>
+                            </li>
+                            <li>
+                                <small>Contraseña debe tener un numero</small>
+                            </li>
+                            <li>
+                                <small>Contraseña debe tener mas de 5 caracteres</small>
+                            </li>
+                        </ul>
+                    </div>
+                <div id = "validadorResultado">
+                </div>
+            </section>
+    
+            <section id = "parte2">
+                <h2>Compra de articulos</h2>
+                <small>Precio baja cada 3 segundos</small><br>
+                <div class = "compra">
+                        <img src="static/images/headphones.jpg" alt="Audifonos Sennheiser" width="300" height="300">
+                        <h2 name = "nombreProducto">Audifonos Sennheiser</h2>
+                        <h3 class = "precio">$<span name = "precio">599.00</span></h3>
+                        <input type = "number" placeholder="Cantidad de productos" name="cantidad" min="1">
+                </div>
+                <div class = "compra">
+                        <img src="static/images/sGalaxy.jpg" alt="Samsung Galaxy A1250" width="300" height="300">
+                        <h2 name = "nombreProducto">Samsung Galaxy A1250</h2>
+                        <h3 class = "precio"><del>$8,099</del> $<span name = "precio">6538.00</span></h3>
+                        <input type = "number" placeholder="Cantidad de productos" name="cantidad" min="1">
+    
+                </div>
+                <div class = "compra">
+                        <img src="static/images/xiaomi.jpg" alt="Xiaomi Mi Band 4 Nacional" width="300" height="300">
+                        <h2 name = "nombreProducto">Xiaomi Mi Band 4 Nacional</h2>
+                        <h3 class = "precio"><del>$899.00</del> $<span name = "precio">749.99</span></h3>
+                        <input type = "number" placeholder="Cantidad de productos" name="cantidad" min="1">
+    
+                </div>
+                <p>
+                <button type="button" onclick="comprar()">Comprar</button>
+                </p>
+    
+                <div id="recibo">
+                    
+                </div>
+            </section>
+    
+            <section id="parte3">
+                <h2>Calculadora Basica</h2>
+                <form>
+                        <input type="number" id="operador1" placeholder="Primer numero">
+
+                        <div class = "dragAndDrop" id="espacioDrop" ondrop="drop(event)" ondragover="permitirDrop(event)"></div>
+
+                        <input type="number" id="operador2" placeholder="Segundo numero"><br>
+
+                        <label>Elige la operacion</label><br><br>
+                        
+                        <div id="operaciones">
+                            <div class = "dragAndDrop" id="espacioDrag1" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="sumaDrag" src="static/images/suma.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <div class = "dragAndDrop" id="espacioDrag2" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="restaDrag" src="static/images/resta.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <div class = "dragAndDrop" id="espacioDrag3" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="multiDrag" src="static/images/multi.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <div class = "dragAndDrop" id="espacioDrag4" ondrop="drop(event)" ondragover="permitirDrop(event)">
+                                <img id="divDrag" src="static/images/division.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                            </div>
+                            <br>
+                        </div>
+                        <button type="button" onclick="calcular()">Calcular</button>
+                </form>
+                <div id = "resultadoCalculo" >
+    
+                </div>
+            </section>
+    
+            <section id="cuestionario">
+                <h2>Cuestionario</h2>
+                <ul>
+                    <li>
+                        <h3>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</h3>
+                        <ul>
+                            <li>
+                                Static: Posición por defecto no afectada por las propiedades top, bottom, left, o right. Se posiciona de acuerdo a la estructura de la pagina.
+                            </li>
+                            <li>
+                                Relative: Posición relativa a la posición original. La diferencia en posición de la original se ajusta con top, bottom, left, y right.
+                            </li>
+                            <li>
+                                Fixed: Posición esta ajustada a la vista del navegador, es decir se mantiene en el mismo lugar aunque el usuario haga scroll a la pagina.
+                            </li>
+                            <li>
+                                Absolute: Posición relativa a una posición asignada. Similar a la Relative pero se asigna una posición especifica como pivote.
+                            </li>
+                            <li>
+                                Sticky: Depende de la posición del scroll del usuario. Puede ser Relative o Fixed de acuerdo a la posición del scroll.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>¿Cuáles son los valores estándar para la propiedad visibility?</h3>
+                        <ul>
+                            <li>
+                                Visible
+                            </li>
+                            <li>
+                                Hidden
+                            </li>
+                            <li>
+                                Collapse
+                            </li>
+                            <li>
+                                Initial
+                            </li>
+                            <li>
+                                Inherit
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>¿Qué es el zIndex y para qué sirve?</h3>
+                        <p>Asigna el orden de como se dibujan los elementos en la pagina. Es decir, un elemento con zIndex alto aparecerá enfrente de todos los elementos. Esto nos sirve para acomodar elementos que aparecen juntos</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id = "OtrasFuentes">
+                <h2>Otras fuentes: </h2>
+                <ul>
+                    <li>
+                        <a href = "https://www.w3schools.com/jsref/prop_style_opacity.asp">Style opacity Property</a>
+                    </li>
+                    <li>
+                        <a href = "https://www.w3schools.com/jsref/prop_element_tagname.asp">HTML DOM tagName Property</a>
+                    </li>
+                    <li>
+                        <a href = "https://www.w3schools.com/jsreF/prop_element_childelementcount.asp">HTML DOM childElementCount Property</a>
+                    </li>
+                </ul>
+            </section>
+    
+            <script src="script.js"></script>
+    </body>
+</html>

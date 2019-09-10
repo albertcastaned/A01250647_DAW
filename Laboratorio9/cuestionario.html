@@ -1,0 +1,23 @@
+<section id="cuestionario">
+    <h2>Cuestionario</h2>
+    <ul>
+        <li>
+            <h3>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención.</h3>
+            <p>Despliega informacion de la confirguracion de PHP y del servidor actual. Max Requests se ve como un atributo importante, ya que con ella podemos limitar el 
+                numero de peticiones por usuario y asi evitar ataques al servidor. Session.MaxLifeTime se ve util para modificar el tiempo de sesion por usuario. 
+                Por ultimo, User-Agent nos indica desde que navegador web se hizo la peticion de la pagina. Lo anterior puede servir para resolver errores ya que 
+                conocemos desde que navegador se causo el error.</p>
+        </li>
+        <li>
+            <h3>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</h3>
+            <p>El servidor que se uso para este laboratorio es XAMPP, y este no es apto para un ambiente de produccion ya que esta enfocado en el ambiente de desarollado y tiene fallas de seguridad. 
+                Para cambiar a un ambiente de produccion tendria que cambiarme a otra herramienta de servidor como Apache. Ya estando en este otro servidor, se desactivaria las configuraciones de desarollo para
+                mayor velocidad y seguridad.
+            </p>
+        </li>
+        <li>
+            <h3>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</h3>
+            <p>Los archivos HTML y PHP se ejecutan desde el servidor, una vez ejecutados y procesados adecuadamente se le envia una respuesta al cliente con el HTML que se despliega en la pantalla del cliente.</p>
+        </li>
+    </ul>
+</section>
