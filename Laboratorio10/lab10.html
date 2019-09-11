@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laboratorio 6</title>
+        <title>Laboratorio 10</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
 
     <body>
         <header>
-            <h1 onmouseover="cambiarFont(this)">Laboratorio 6</h1>
+            <h1>Laboratorio 10</h1>
             <nav>
-                <a onmouseover="cambiarFont(this)" href="../index.html">Home</a> |
-                <a onmouseover="cambiarFont(this)" href="#parte1">Ejercicio 1</a> |
-                <a onmouseover="cambiarFont(this)" href="#parte2">Ejercicio 2</a> |
-                <a onmouseover="cambiarFont(this)" href="#parte3">Ejercicio 3</a> |
-                <a onmouseover="cambiarFont(this)" href="#cuestionario">Cuestionario</a> | 
-                <a onmouseover="cambiarFont(this)" href="#OtrasFuentes">Otras Fuentes</a>
+                <a href="../index.html">Home</a> |
+                <a href="#parte1">Ejercicio 1</a> |
+                <a href="#parte2">Ejercicio 2</a> |
+                <a href="#parte3">Ejercicio 3</a> |
+                <a href="#cuestionario">Cuestionario</a> | 
+                <a href="#OtrasFuentes">Otras Fuentes</a>
         </nav>
         </header>
-
-        <div id = "watermark">
-            <h1>A0125647</h1>
-        </div>
         <section id = "parte1" >
                 <h2>Validador de Passwords</h2>
-                <form onmouseover="mostrarInformacionValidador()" onmouseout="esconderInformacionValidador()">
+                <form action="resultadoProblema1.php" method="post" onmouseover="mostrarInformacionValidador()" onmouseout="esconderInformacionValidador()">
                     <p>
                         <label>Contraseña</label><br>
-                        <input type="password" id="password1">
+                        <input type="password" name="password1">
                     </p>
                     <p>
                         <label>Confirmar contraseña</label><br>
-                        <input type="password" id="password2">
+                        <input type="password" name="password2">
                     </p>
                     <p>
-                        <button type="button" onclick="validarContra()">Registrar</button>
+                        <input type="submit">
                     </p>
                 </form>
                     <div class = "condiciones" id = "seccionCondiciones">
