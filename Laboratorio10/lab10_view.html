@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorio 10</title>
+        <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Laboratorio 10</h1>
+        </header>
+
+        <section>
+            <h2>Registar venta de producto</h2>
+            <form method="POST" action="lab10_controller.php">
+                Nombre del producto: <br>
+                <input type="text" name="nombre"><br>
+                Nombre del cliente: <br>
+                <input type="text" name="cliente"><br>
+                Precio total: <br>
+                <input type="number" name="precio" min="1.0" placeholder="1.0" step="0.01"><br>
+                Fecha de pedido: <br>
+                <input type="date" name="fechaPedido"><br>
+                Fecha de entrega: <br>
+                <input type="date" name="fechaEntrega"><br>
+
+                <input type="submit">
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Realizar consulta de ventas</h2>
+
+            <form method="POST" action="lab10_controller.php">
+                <input type="submit" value="Consultar">
+            </form>
+        </section>
+
+        <section id="cuestionario">
+            <h2>Cuestionario</h2>
+        </section>
+    </body>
+</html>
