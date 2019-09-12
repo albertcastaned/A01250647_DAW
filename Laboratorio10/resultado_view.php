@@ -15,54 +15,51 @@
             <?php echo $mensaje ?>
         </section>
 
-        <section id="cuestionario">
+        <section>
             <h2>Cuestionario</h2>
             <ul>
                 <li>
-                    <h3>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</h3>
-                    <ul>
-                        <li>
-                            Static: Posición por defecto no afectada por las propiedades top, bottom, left, o right. Se posiciona de acuerdo a la estructura de la pagina.
-                        </li>
-                        <li>
-                            Relative: Posición relativa a la posición original. La diferencia en posición de la original se ajusta con top, bottom, left, y right.
-                        </li>
-                        <li>
-                            Fixed: Posición esta ajustada a la vista del navegador, es decir se mantiene en el mismo lugar aunque el usuario haga scroll a la pagina.
-                        </li>
-                        <li>
-                            Absolute: Posición relativa a una posición asignada. Similar a la Relative pero se asigna una posición especifica como pivote.
-                        </li>
-                        <li>
-                            Sticky: Depende de la posición del scroll del usuario. Puede ser Relative o Fixed de acuerdo a la posición del scroll.
-                        </li>
-                    </ul>
+                    <h2>¿Por qué es una buena práctica separar el controlador de la vista?</h2>
+                    <p>Permite la reutilizacion de codigo, y al separar el codigo por componentes se tiene una mejor organizacion.</p>
                 </li>
                 <li>
-                    <h3>¿Cuáles son los valores estándar para la propiedad visibility?</h3>
-                    <ul>
-                        <li>
-                            Visible
-                        </li>
-                        <li>
-                            Hidden
-                        </li>
-                        <li>
-                            Collapse
-                        </li>
-                        <li>
-                            Initial
-                        </li>
-                        <li>
-                            Inherit
-                        </li>
+                    <h2>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?
+                    </h2>
+                    <p>
+                        <ul>
+                            <li>
+                                $_SESSION: Continee variables de la sesion actual. 
+                            </li>
+                            <li>
+                                $_FILES: Contiene un arreglo de objetos publicados con $_POST.
+                            </li>
+                            <li>
+                                $_SERVER: Contiene informacion como direcciones de scripts, y headers.
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <h2>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</h2>
+                    <p>
+                        <ul>
+                            <li>
+                                implode: Une una collecion de elementos de un arreglo con una conexion auxiliar como una comma por ejemplo.
+                            </li>
 
-                    </ul>
+                            <li>
+                                array_merge: Une dos arreglos automaticamente. Si se repiten elementos, no se agrega uno nuevo. 
+                            </li>
+                        </ul>
+                    </p>
                 </li>
                 <li>
-                    <h3>¿Qué es el zIndex y para qué sirve?</h3>
-                    <p>Asigna el orden de como se dibujan los elementos en la pagina. Es decir, un elemento con zIndex alto aparecerá enfrente de todos los elementos. Esto nos sirve para acomodar elementos que aparecen juntos</p>
+                    <h2>¿Qué es XSS y cómo se puede prevenir?</h2>
+                    <p>
+                        Cross-site Scripting se refiere a los ataques cuando un texto plano se representa como un elemento HTML o Javascript cuando no deberia. Para evitarlo, se utiliza el metodo htmlspecialchars para convertir a texto plano. Tambien, se puede implementar una funcion para validar que no haya caracteres ilegales.
+                    </p>
                 </li>
+
             </ul>
         </section>
     </body>
