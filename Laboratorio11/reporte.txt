@@ -1,0 +1,19 @@
+¿Qué muestra la instrucción?
+La descripción de la tabla indicada
+
+
+¿Qué efecto tuvo esta acción?
+Se crearon las tablas con sus respectivos atributos nuevamente.
+
+¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+Se pueden guardar por separado los comandos que se desean para reutilizarse y modificarse rápidamente.
+
+
+¿Qué relación tienen con las tablas de la base de datos? (checa su contenido)
+Contiene los valores de los atributos de la tabla separados por una coma.
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+Contiene los valores de la tabla materiales.
+
+¿Qué sucedió?
+Selecciona y muestra todos los renglones de la tabla Materiales.
