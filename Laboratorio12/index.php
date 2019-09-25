@@ -8,18 +8,17 @@
 
         $resultado = "";
         foreach ($libros->book as $libro) {
+            $resultado .=   "<div class='section'>";
             $resultado .= "<h3>" . $libro->title . "</h3>";
             $resultado .= "<p>Autor: " . $libro->author . "</p><br>";
             $resultado .= "<p>Publicado en: " . $libro->publish_date . "</p><br>";
             $resultado .= "<p>Genero: " . $libro->genre . "</p><br>";
             $resultado .= "<p>Precio: " . $libro->price . "</p><br>";
             $resultado .= "<p>Descripcion: " . $libro->description . "</p><br>";
-
-
+            $resultado .= "</div>  <div class='divider'></div>";
 
         }
         return $resultado;
-
     }
     session_start();
     include_once("_header.html");
@@ -37,7 +36,7 @@
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         if (file_exists($target_file)) {
-            $uploadOk = 0;
+            echo "El archivo ya ha sido subido anteriormente.";
         }
         if ($_FILES["fileToUpload"]["size"] > 500000) {
             echo "Lo siento, el archivo excede el tamaño maximo.";
@@ -47,9 +46,7 @@
             echo "Lo siento, solo se permiten archivos XML";
             $uploadOk = 0;
         }
-        if ($uploadOk == 0) {
-            echo "Lo siento, tu archivo no ha sido subido..";
-        } else {
+        if ($uploadOk == 1) {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "El archivo ". basename( $_FILES["fileToUpload"]["name"]). " se ha subido.";
             } else {
