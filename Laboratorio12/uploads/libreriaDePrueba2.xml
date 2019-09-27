@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<catalog>
+   <book id="bk101">
+      <author>Giada De Laurentiis</author>
+      <title>Everyday Italian</title>
+      <genre>Cooking</genre>
+      <price>30.00</price>
+      <publish_date>2005</publish_date>
+      <description>Cooking italian food for the average person.</description>
+   </book>
+   <book id="bk102">
+      <author>J.K. Rowling</author>
+      <title>Harry Potter</title>
+      <genre>Fantasy</genre>
+      <price>29.99</price>
+      <publish_date>2005</publish_date>
+      <description>Harry and friends go through a magical adventure.</description>
+   </book>
+   <book id="bk103">
+      <author>James McGovern</author>
+      <title>XQuery Kick Start</title>
+      <genre>Computer</genre>
+      <price>49.99</price>
+      <publish_date>2003</publish_date>
+      <description>Learn XQuery with the most efficent approach.</description>
+   </book>
+</catalog>
