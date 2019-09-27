@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <title>Capturador de XML</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body>
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
             <a href="index.php">Laboratorio 11: Cargar libreria con XML</a>
-            <a class="right" href="logout.php">Cerrar Sesion</a>
+          
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                <li>
+                    <a class="modal-trigger" href="#modal1">Cuestionario</a>
+                </li>
+                <li>
+                    <a class="right" href="logout.php">Cerrar Sesion</a>
+                </li>
+            </ul>
         </div>
+
+                      
     </nav>
+
 </div>
 
+              
 <main class="center-align">
 
+<div id="modal1" class="modal">
+        <div class="modal-content">
+        <h4>Cuestionario</h4>
+        <h5>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</h5>
+        <p>Para borrar las variables de la session, y los datos de la sesion respectivamente. Session_unset solo borra las variables, mientras session_destroy borra los datos de la sesion pero no las las variables.</p>
+        <h5>¿Cuál es la diferencia entre una variable de sesión y una cookie?</h5>
+        <p>Los datos de la sesion se almacenan en el servidor. En cambio, los datos de una cookie se almacena en el navegador del cliente o usuario. Las sesiones utilizan cookies, pero estas se almacenan en el registro del usuario en el servidor.</p>
+        <h5>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</h5>
+        <p>Existen varias tecnicas para evitar que un archivo subido tenga el mismo nombre que otro. La principal utilizada es Hashing, el cual utiliza un algoritmo predefinido que encripta el nombre del archivo para garantizar unicidad. Tambien, se puede utilizar timestamps que asigna el tiempo de subida al archivo. Se puede realizar una combinacion de las 2 tecnicas anteriores.</p>
+        <h5>¿Qué es CSRF y cómo puede prevenirse?</h5>
+        <p>Un tipo de ataque que hace que usuarios autenticados logren acceder a funciones o acciones que no deberian poder realizarse con su rol. Una forma de prevenir este ataque es asignar un Cookie con un valor generado aleatoriamente cuando un usuario inicia sesion en una pagina. Al enviar peticiones con formas, el servidor compara si el Cookie que es enviado junto a la forma corresponde al del usuario.</p>
+            
+    </div>
+</div>

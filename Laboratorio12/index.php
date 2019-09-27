@@ -1,12 +1,12 @@
 <?php
     function desplegarInfoDeXML($direccionXML)
     {
-
         $archivo = file_get_contents($direccionXML); 
 
         $libros = new SimpleXMLElement($archivo);
 
         $resultado = "";
+        $resultado .= "<h2>" . $_SESSION["nombre"] . ", aqui estan los datos de los libros que cargaste:" . "</h2><br>";
         foreach ($libros->book as $libro) {
             $resultado .=   "<div class='section'>";
             $resultado .= "<h3>" . $libro->title . "</h3>";
@@ -24,7 +24,6 @@
     include_once("_header.html");
 
     if(isset($_SESSION["nombre"])) {
-        echo "<h2>" . $_SESSION["nombre"] . ", aqui estan los datos de los libros que cargaste:" . "</h2><br><br>";
         echo $_SESSION["contenido"];
         include_once("_logout.html");
    
@@ -39,11 +38,11 @@
             echo "El archivo ya ha sido subido anteriormente.";
         }
         if ($_FILES["fileToUpload"]["size"] > 500000) {
-            echo "Lo siento, el archivo excede el tamaño maximo.";
+            echo "El archivo excede el tamaño maximo.";
             $uploadOk = 0;
         }
         if($imageFileType != "xml") {
-            echo "Lo siento, solo se permiten archivos XML";
+            echo "Solo se permiten archivos XML";
             $uploadOk = 0;
         }
         if ($uploadOk == 1) {
@@ -54,10 +53,10 @@
             }
         }
         $_SESSION["nombre"] = $_POST["nombre"];
-        $_SESSION["dirXML"] = $target_file;
-        $_SESSION["contenido"] = desplegarInfoDeXML($_SESSION["dirXML"]);         
-        echo "<h2>" . $_SESSION["nombre"] . ", aqui estan los datos de los libros que cargaste:" . "</h2><br>";
+        $_SESSION["contenido"] = desplegarInfoDeXML($target_file);         
+
         echo $_SESSION["contenido"];
+        
         include_once("_logout.html");
         
     } else {
