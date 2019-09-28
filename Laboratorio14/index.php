@@ -1,21 +1,42 @@
 <?php
+    include_once("_header.html");
     require_once "util.php";
-    $result = getFruits();
+    $result1 = getFruits();
 
-    echo "<table>";
-    while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
+    include("_tableHeader.html");
+    while($row = mysqli_fetch_array($result1, MYSQLI_BOTH))
     {
-        echo "<tr>";
-        echo "<td>" . $row["nombre"] . "</td>";
-        echo "<td>" . $row["unidades"] . "</td>";
-        echo "<td>" . $row["cantidad"] . "</td>";
-        echo "<td>" . $row["precio"] . "</td>";
-        echo "<td>" . $row["pais"] . "</td>";
-        echo "</tr>";
+        echo desplegarTabla($row);
     }
     echo "</table>";
 
-    mysqli_free_result($result);
+    mysqli_free_result($result1);
 
-    
+    $result2 = getFruitsByName("Naranja");
+
+    include("_tableHeader.html");
+
+    while($row = mysqli_fetch_array($result2, MYSQLI_BOTH))
+    {
+        echo desplegarTabla($row);
+    }
+
+    echo "</table>";
+
+    mysqli_free_result($result2);
+
+
+    $result3 = getCheapestFruits(200);
+
+    include("_tableHeader.html");
+
+    while($row = mysqli_fetch_array($result3, MYSQLI_BOTH))
+    {
+        echo desplegarTabla($row);
+    }
+    echo "</table>";
+
+    mysqli_free_result($result3);
+    include_once("_footer.html");
+
 ?>

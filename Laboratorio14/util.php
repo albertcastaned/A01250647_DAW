@@ -37,9 +37,9 @@
     {
         $conn = connectDB();
 
-        $sql = "SELECT Nombre, Unidades, Cantidad, Precio, Pais FROM Fruta WHERE name LIKE  '%" . $fruit_name . "%'";
+        $sql = "SELECT nombre, unidades, cantidad, precio, pais FROM fruta WHERE nombre LIKE '%$fruit_name%'";
 
-        $result = mysqli_query($conn, $sql);
+        $result = $conn->query($sql);
 
         closeDB($conn);
         
@@ -49,12 +49,25 @@
     {
         $conn = connectDB();
 
-        $sql = "SELECT Nombre, Unidades, Cantidad, Precio, Pais FROM Fruta WHERE price <=  '" . $cheap_price . "'";
+        $sql = "SELECT nombre, unidades, cantidad, precio, pais FROM fruta WHERE precio < $cheap_price";
 
-        $result = mysqli_query($conn, $sql);
+        $result = $conn->query($sql);
 
         closeDB($conn);
         
         return $result;
+    }
+
+    function desplegarTabla($row)
+    {
+        $resultado = "";
+        $resultado .= "<tr>";
+        $resultado .= "<td>" . $row["nombre"] . "</td>";
+        $resultado .=  "<td>" . $row["unidades"] . "</td>";
+        $resultado .=  "<td>" . $row["cantidad"] . "</td>";
+        $resultado .=  "<td>" . $row["precio"] . "</td>";
+        $resultado .=  "<td>" . $row["pais"] . "</td>";
+        $resultado .=  "</tr>";
+        return $resultado;
     }
 ?>
