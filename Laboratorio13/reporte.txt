@@ -1,0 +1,50 @@
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe?
+La llave primaria del nuevo renglón ya existe en la tabla, pero aun así se agrega aunque no se debe. Esto pasa porque no le hemos asignado el constraint de llave primaria.
+
+
+¿Qué ocurrió?
+El nuevo renglón no se agrego ya que esa llave primaria ya existía en algún elemento de la tabla.
+
+
+¿Qué información muestra esta consulta?
+Regresa una lista de los constraints en la tabla, junto a las columnas en donde se asignaron, y si son constraints por usuario o por el sistema.
+
+¿Qué sentencias utilizaste para definir las llaves primarias?
+ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero)
+
+ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC)
+
+¿Qué sentencias utilizaste para definir este constraint?
+ALTER TABLE Entregas add constraint llaveEntregas PRIMARY KEY (Clave,RFC,Numero)
+
+¿Qué particularidad observas en los valores para clave, rfc y numero?
+Son valores nulos o no dan informacion
+
+¿Cómo responde el sistema a la inserción de este registro?
+Lo inserta normalmente.
+
+¿Qué significa el mensaje que emite el sistema?
+Error tipo 3621
+¿Qué significado tiene la sentencia anterior?
+Error en la inserción de datos por inconsistencia
+
+¿Qué significan las columnas de esas consultas?
+Muestra infirmacion de los constraints construidos.
+
+
+¿Qué uso se le está dando a GETDATE()?
+Obtiene la fecha y hora actual.
+¿Tiene sentido el valor del campo de cantidad?
+No, ya que cantidad debe ser un valor positivo y entero.
+
+¿Cómo responde el sistema?
+Despliega un error tipo 3621.
+¿Qué significa el mensaje?
+Error de infracción en un constraint, osea el que se acaba de asignar de valor positivo requerido para cantidad.
+
+
+Integridad Referencial
+La integridad referencial se refiere a un sistema de reglas en las bases de datos relacionales que garantiza la validez de las relaciones de la tabla y que no borren o cambien datos relacionados de forma accidental al borrar uno.
+
+4.3 Regla de Integridad Referencial, Dataprix, 11 de Diciembre 2009,
+https://www.dataprix.com/es/43-regla-integridad-referencial
