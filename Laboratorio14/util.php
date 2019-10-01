@@ -58,7 +58,7 @@
         return $result;
     }
 
-    function desplegarTabla($row)
+    function nuevoRenglonDeTabla($row)
     {
         $resultado = "";
         $resultado .= "<tr>";
