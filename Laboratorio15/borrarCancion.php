@@ -4,7 +4,7 @@
     session_start();
 
     $timestamp = date('Y-m-d G:i:s');
-    borrarCancion("miguel", $_POST["id"]);
+    borrarCancion($timestamp,$_GET["id"]);
 
                  
     header("location:listaCanciones.php");

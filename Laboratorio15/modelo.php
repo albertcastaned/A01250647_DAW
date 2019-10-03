@@ -26,7 +26,7 @@ function canciones($id=0) {
     
     $resultado = '<div class="row">';
     
-    $query = 'SELECT id, link, pedido_por, solicitado_en, borrado_en FROM cancion WHERE borrado_en IS NULL';
+    $query = 'SELECT id, link, pedido_por, solicitado_en, borrado_en FROM cancion WHERE borrado_en IS NULL ORDER BY solicitado_en DESC';
     
     if($id != 0) {
         $query .= " WHERE id=$id";
@@ -79,16 +79,19 @@ function nuevaCancion($link, $pedido_por) {
 
     closeDB($db);
 }
-function borrarCancion($id) {
+function borrarCancion($timestamp, $id) {
     
     $db = connectDB();    
 
-    $query="UPDATE cancion SET pedido_por = 'yes' WHERE id=$id";
+    $query="UPDATE cancion SET borrado_en=? WHERE id=?";
     
     if (!($statement = $db->prepare($query))) {
         die("No se pudo preparar la consulta para la bd: (" . $db->errno . ") " . $db->error);
     }
-
+    if (!$statement->bind_param("ss", $timestamp, $id)) {
+        die("Falló la vinculación de los parámetros: (" . $statement->errno . ") " . $statement->error); 
+    }
+    
     if (!$statement->execute()) {
         die("Falló la ejecución de la consulta: (" . $statement->errno . ") " . $statement->error);
     }
