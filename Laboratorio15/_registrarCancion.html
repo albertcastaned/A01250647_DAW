@@ -1,0 +1,17 @@
+<h1>Registra tu cancion</h1>
+<div class="row">
+<form id="forma" method="POST" action="index.php">
+    <?php if(isset($error_nombre)): ?>
+        <span class="red-text">*<?=$error_nombre?></span>
+        <?php endif; ?>
+            <label>Tu nombre:</label>
+            <input type="text" name="nombre" required>
+            <label>Link de Spotify a la cancion </label>
+            <input type="text" name="link" required>
+
+</form>
+</div>
+
+<div class="row">
+    <button class="waves-effect waves-light btn" type="submit" form="forma">Enviar</button>
+</div>

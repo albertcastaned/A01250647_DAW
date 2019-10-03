@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Laboratorio 15</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav class="#388e3c green darken-2">
+        <div class="nav-wrapper">
+            <a href="index.php">Laboratorio 15: Playlist Colaborativo de Spotify</a>
+          
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="modal-trigger" href="#modal2">¿Como obtener link de cancion?</a>
+                </li>
+                <li>
+                    <a class="modal-trigger" href="#modal1">Cuestionario</a>
+                </li>
+
+                <?php if(isset($_SESSION["nombre"])): ?>
+                <li>
+                    <a class="modal-trigger" href="logout.php">Cerrar Sesion</a>
+                </li>
+                <?php else: ?>
+                <li>
+                    <a class="modal-trigger" href="index.php">Inicar Sesion</a>
+                </li>
+                <?php endif; ?>
+
+            </ul>
+        </div>
+
+                      
+    </nav>
+
+</div>
+
+              
+<main class="center-align">
+
+<div id="modal1" class="modal">
+        <div class="modal-content">
+        <h4>Cuestionario</h4>
+        <h5>¿Qué es ODBC y para qué es útil?</h5>
+        <p>Permite acceder a una base de datos sin importar la interfaz. Es decir, poder conectarse a una misma base de datos con diferentes aplicaciones.</p>
+        <h5>¿Qué es SQL Injection?</h5>
+        <p>Al igual que los otros tipos de ataques que hemos visto en otros laboratorios, este ataque se realiza cuando un usuario ingresa un comando como un atributo. En este caso, ocurre cuando el usuario ingresa un comando SQL para ingresar, modificar, borrar, y alterar la base de datos.</p>
+        <h5>¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?</h5>
+        <p>Una tecnica util para evitar estos ataques es convertir el ingreso de datos al tipo de datos que se requiere. Otra tecnica es evitar caracteres especiales para evitar comandos especiales tipo REGEX. Por ultimo, se puede restringir el acceso al usuario para que no pueda hacer alteraciones drasticas a la base de datos.</p>
+         
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+    <img src="https://developer.spotify.com/assets/select-track-link.png" width="700" height="600">
+</div>
+</div>
