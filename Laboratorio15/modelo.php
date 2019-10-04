@@ -1,5 +1,10 @@
 <?php
 
+
+function _e($string)
+{
+    return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
+}
 function connectDB() {
     
     $environment = "DEV";
@@ -24,7 +29,7 @@ function canciones($id=0) {
     
     $db = connectDB();
     
-    $resultado = '<div class="row">';
+    echo '<div class="row">';
     
     $query = 'SELECT id, link, pedido_por, solicitado_en, borrado_en FROM cancion WHERE borrado_en IS NULL ORDER BY solicitado_en DESC';
     
@@ -34,28 +39,14 @@ function canciones($id=0) {
     
     $registros = $db->query($query);
     while ($fila = mysqli_fetch_array($registros, MYSQLI_BOTH)) {
-        $resultado .= '
-            <div class="col s12 m6 l4">
-                <div class="card">
-                    <div>
-                        '.$fila["link"].'
-                    </div>
-                    <div class="card-content">
-                        <p>Solicitado por '.$fila["pedido_por"].'<br>en '.$fila["solicitado_en"].'
-                        <a href="borrarCancion.php?id='.$fila["id"].'"><i class="material-icons delete">delete</i></a></p>
-                    </div>
-                </div>
-            </div>
-        ';
+        include("_cancion.html");
     }
     
-    $resultado .= "</div>";
+    echo "</div>";
     
     mysqli_free_result($registros);
 
     closeDB($db);
-    
-    return $resultado;
 }
 
 function nuevaCancion($link, $pedido_por) {

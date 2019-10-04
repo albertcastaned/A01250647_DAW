@@ -46,18 +46,17 @@
 <div id="modal1" class="modal">
         <div class="modal-content">
         <h4>Cuestionario</h4>
-        <h5>¿Qué es ODBC y para qué es útil?</h5>
-        <p>Permite acceder a una base de datos sin importar la interfaz. Es decir, poder conectarse a una misma base de datos con diferentes aplicaciones.</p>
-        <h5>¿Qué es SQL Injection?</h5>
-        <p>Al igual que los otros tipos de ataques que hemos visto en otros laboratorios, este ataque se realiza cuando un usuario ingresa un comando como un atributo. En este caso, ocurre cuando el usuario ingresa un comando SQL para ingresar, modificar, borrar, y alterar la base de datos.</p>
-        <h5>¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?</h5>
-        <p>Una tecnica util para evitar estos ataques es convertir el ingreso de datos al tipo de datos que se requiere. Otra tecnica es evitar caracteres especiales para evitar comandos especiales tipo REGEX. Por ultimo, se puede restringir el acceso al usuario para que no pueda hacer alteraciones drasticas a la base de datos.</p>
-         
+        <h5>¿Por qué es una buena práctica separar el modelo del controlador?</h5>
+        <p>Es buena practica ya que el modelo puede o debe ser utilizado por varios controladores en el sitio web.</p>
+        <h5>¿Qué es SQL injection y cómo se puede prevenir?</h5>
+        <p>Es similar al ataque XSS ya que implica que un usuario ingresa comandos en un input para poder asi hacer que el sistema los ejecute. En este caso, serian comandos de tipo SQL. Es importante prevenir estos ataques ya que podrian borrar y modificar nuestra base de datos. Para prevenirlo, se pueden utilizar
+            los metodos de preparacion que revisa que el input no sea un comando SQL similarmente al comando htmlcharacters en el caso de XSS. En este laboratorio se utilizo el metodo anterior.</p>
+ 
     </div>
 </div>
 
 <div id="modal2" class="modal">
     <div class="modal-content">
-    <img src="https://developer.spotify.com/assets/select-track-link.png" width="700" height="600">
+    <img src="media/tutorial.png" width="700" height="600">
 </div>
 </div>

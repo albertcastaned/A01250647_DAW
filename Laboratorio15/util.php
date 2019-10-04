@@ -1,36 +1,20 @@
 <?php
-    function connectDB()
+
+    function getSongLink($string)
     {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "Spotify";
-
-        $con = mysqli_connect($servername,$username,$password,$dbname);
-
-        if(!$con)
-        {
-            die("Conexion fallo: " . mysqli_connect_error());
-        }
-        mysqli_set_charset($con,"utf8");
-
-        return $con;
+        substr($string,-22);
+        return substr($string,31);
     }
-
-    function closeDB($mysql)
+    
+    function chechValid($key)
     {
-        mysqli_close($mysql);
-    }
+        $url = "https://open.spotify.com/embed/track/" . $key;
+        $arreglo = @get_headers($url);
 
-    function getCanciones()
-    {
-        $conn = connectDB();
-        $sql = "SELECT id, link, solicitado_por FROM cancion";
-        $result = $conn->query($sql);
+        $status = $arreglo[0];
 
-        closeDB($conn);
-
-        return $result;
+        return strpos($status,"200");
+        
     }
 
 ?>

@@ -2,12 +2,15 @@
 <div class="row">
 <form id="forma" method="POST" action="index.php">
     <?php if(isset($error_nombre)): ?>
-        <span class="red-text">*<?=$error_nombre?></span>
-        <?php endif; ?>
+        <span class="red-text">*<?=$error_nombre?></span><br>
+    <?php endif; ?>
+    <?php if(isset($error_link)): ?>
+        <span class="red-text">*<?=$error_link?></span><br>
+    <?php endif; ?>
             <label>Tu nombre:</label>
-            <input type="text" name="nombre" required>
+            <input type="text" name="nombre">
             <label>Link de Spotify a la cancion </label>
-            <input type="text" name="link" required>
+            <input type="text" name="link">
 
 </form>
 </div>
