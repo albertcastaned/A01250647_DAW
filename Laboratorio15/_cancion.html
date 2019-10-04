@@ -1,0 +1,11 @@
+<div class="col s12 m6 l4">
+    <div class="card">
+        <div>
+            <iframe src="https://open.spotify.com/embed/track/<?= $fila['link'] ?>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="card-content">
+            <p>Solicitado por <?= $fila["pedido_por"] ?> <br>en <?= $fila["solicitado_en"] ?>
+            <a href="borrarCancion.php?id=<?= $fila['id'] ?>" <i class="material-icons delete">delete</i></a></p>
+        </div>
+    </div>
+</div>

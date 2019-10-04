@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Laboratorio 15</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav class="#388e3c green darken-2">
+        <div class="nav-wrapper">
+            <a href="index.php">Laboratorio 15: Playlist Colaborativo de Spotify</a>
+          
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="modal-trigger" href="#modal2">¿Como obtener link de cancion?</a>
+                </li>
+                <li>
+                    <a class="modal-trigger" href="#modal1">Cuestionario</a>
+                </li>
+
+                <?php if(isset($_SESSION["nombre"])): ?>
+                <li>
+                    <a class="modal-trigger" href="logout.php">Cerrar Sesion</a>
+                </li>
+                <?php else: ?>
+                <li>
+                    <a class="modal-trigger" href="index.php">Inicar Sesion</a>
+                </li>
+                <?php endif; ?>
+
+            </ul>
+        </div>
+
+                      
+    </nav>
+
+</div>
+
+              
+<main class="center-align">
+
+<div id="modal1" class="modal">
+        <div class="modal-content">
+        <h4>Cuestionario</h4>
+        <h5>¿Por qué es una buena práctica separar el modelo del controlador?</h5>
+        <p>Es buena practica ya que el modelo puede o debe ser utilizado por varios controladores en el sitio web.</p>
+        <h5>¿Qué es SQL injection y cómo se puede prevenir?</h5>
+        <p>Es similar al ataque XSS ya que implica que un usuario ingresa comandos en un input para poder asi hacer que el sistema los ejecute. En este caso, serian comandos de tipo SQL. Es importante prevenir estos ataques ya que podrian borrar y modificar nuestra base de datos. Para prevenirlo, se pueden utilizar
+            los metodos de preparacion que revisa que el input no sea un comando SQL similarmente al comando htmlcharacters en el caso de XSS. En este laboratorio se utilizo el metodo anterior.</p>
+ 
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+    <img src="media/tutorial.png" width="700" height="600">
+</div>
+</div>
