@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/tecify.css" rel="stylesheet">
+
+    <title>Laboratorio 18 - Ajax</title>
+</head>
+<body>
+
+<header>
+  
+    <nav>
+        <div class="nav-wrapper green darken-1">
+            <a href="index.php" class="brand-logo">LABORATORIO 18</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                <a class="modal-trigger" href="#modal">Cuestionario</a>
+            </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div id="modal" class="modal">
+            <div class="modal-content">
+            <h4>Cuestionario</h4>
+            <h5>¿Qué importancia tiene AJAX en el desarrollo de RIA's Rich Internet Applications?</h5>
+            <p>La implementacion de AJAX reduce el tiempo de respuesta de una peticion por el navegodar web, lo que mejora la experiencia RIA y hace que estas aplicaciones lleguen al nivel de una aplicacion de escritorio.</p>
+            <h5>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</h5>
+            <p>El llamado de JS se envian por texto plano, por lo cual es posible que valores importantes como IDs de Usuarios que se utilizan en AJAX puedan ser accesibles por otros. Para evitar esto, es importante encriptar y desencriptar los datos del lado del cliente y del servidor respectivamente.</p>
+            <h5>¿Qué es JSON?</h5>
+            <p>Javascript Object Notation es un formato de texto sencillo y legible tanto para el humano como para computadoras. Se utiliza en la modernidad para recibir y enviar datos en la web ya que es mas facil obtener sus atributos que otros formatos como XML.</p>
+        </div>
+    </div>
+</header>
+<main>
+
+<div class="container">
