@@ -1,0 +1,29 @@
+<div class="row">
+    <h3>Registrar Zombie</h3>
+</div>
+
+<div class="row">
+        <form class="col s12" id="forma" method="POST" action="registrar.php">
+          <div class="row">
+            <div class="input-field col s12">
+                    <input name="nombre" type="text" required>
+                    <label>Escribe el nombre del zombie</label> 
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                    <select name="estado" required>
+                        <option value="" disabled selected>Elige un estado inicial</option>
+                        <?php foreach ($estados as $estado): ?>
+                            <option value="<?= $estado[0] ?>"><?= $estado[1] ?></option>
+                        <?php endforeach ?>
+                    </select>
+                    <label>Elegir el estado inicial</label> 
+            </div>
+          </div>
+        </form>
+        <div class="row">
+                <button class="waves-effect waves-light btn" type="submit" form="forma">Registrar</button>
+            </div>
+      </div>
